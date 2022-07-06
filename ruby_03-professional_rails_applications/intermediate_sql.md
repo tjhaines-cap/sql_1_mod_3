@@ -211,6 +211,12 @@ This is useful, but we probably don't need all of the information from both tabl
 * Can you get it to display only the name for the item and the name for the season?
 * Having two columns with the same name is confusing. Can you customize each heading using `AS`?
 
+```sql
+SELECT items.name AS item_name, seasons.name AS season_name FROM items
+INNER JOIN seasons
+ON items.season_id = seasons.id;
+```
+
 It should look like this:
 
 ```sql
